@@ -39,8 +39,8 @@ jobs:
             run: npm test
 
           - name: Archive test result
-            uses: actions/upload-artifact@v4
+            uses: actions/upload-artifact@v3
             with:
-              name: Mocha-Test-Result
+              name: Mocha-Test-Result-matrix
               path: test-results.xml
               
