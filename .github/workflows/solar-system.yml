@@ -1,11 +1,11 @@
 name: Workflow Solar System app
 
 on:
-    workflow_dispatch:
-    push:
-        branches:
-          - main
-          - '/feature/*'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'feature/*'
 
 env:
     MONGO_URI: ${{ vars.MONGO_URI }}
