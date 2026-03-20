@@ -27,7 +27,7 @@ jobs:
           - name: Checkout repository
             uses: actions/checkout@v4
         
-          - name: Setup nodeJS
+          - name: Setup nodeJS Version - ${{ matrix.nodejs_version }}
             uses: actions/setup-node@v3
             with:
                 node-version: ${{ matrix.nodejs_version  }}
@@ -38,7 +38,7 @@ jobs:
           - name: Unit test
             run: npm test
 
-          - name: Archive test resuçt
+          - name: Archive test result
             uses: actions/upload-artifact@v4
             with:
               name: Mocha-Test-Result
